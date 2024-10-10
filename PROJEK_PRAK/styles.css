@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e4b859d9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #eae5e2;
+}
+
+.logo h1 {
+    font-family: 'Limelight', cursive;
+    font-size: 48px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    font-family: 'DM Serif Display', serif;
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.recommendation {
+    margin: 40px 0;
+    padding: 0 50px;
+}
+
+.recommendation h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.movies {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.movie {
+    margin-bottom: 20px;
+}
+
+.movie img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+/* Media Queries untuk tampilan di mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Ubah arah menjadi vertikal pada layar kecil */
+        align-items: center; /* Pusatkan elemen pada layar kecil */
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0; /* Hilangkan margin kiri pada item navigasi */
+        margin-bottom: 10px; /* Jarak antar item di navigasi */
+    }
+
+    .logo h1 {
+        font-size: 36px; /* Ukuran font yang lebih kecil untuk layar kecil */
+    }
+
+    .recommendation {
+        padding: 0 20px; /* Sesuaikan padding di layar kecil */
+    }
+
+    .movies {
+        flex-direction: column; /* Ubah tampilan film menjadi vertikal */
+        align-items: center; /* Pusatkan elemen film */
+    }
+
+    .movie img {
+        width: 100%; /* Film mengambil lebar penuh pada layar kecil */
+        height: auto; /* Sesuaikan tinggi otomatis */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 28px; /* Lebih kecil untuk layar sangat kecil */
+    }
+
+    .recommendation h2 {
+        font-size: 20px; /* Sesuaikan ukuran judul */
+    }
+
+    .movie img {
+        width: 100%; /* Lebar penuh untuk layar yang lebih kecil */
+    }
+}

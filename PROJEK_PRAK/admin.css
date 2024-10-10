@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #8A2F2F;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    color: white;
+}
+
+.sidebar h1 {
+    font-family: 'Limelight', cursive;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    font-family: 'DM Serif Display', serif;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+}
+
+.sidebar ul li a.active {
+    background-color: #A83232;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.main-content h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.movie-list {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+th {
+    background-color: #eae5e2;
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+td {
+    vertical-align: top;
+}
+
+td img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* Sidebar menjadi atas layar */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .sidebar h1 {
+        font-size: 28px;
+    }
+
+    .sidebar h2 {
+        font-size: 18px;
+    }
+
+    .sidebar ul li {
+        margin: 10px 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .main-content h2 {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    /* Table menjadi scrollable */
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+
+    /* Ukuran gambar film lebih kecil */
+    td img {
+        width: 80px;
+    }
+
+    th, td {
+        font-size: 14px; /* Ukuran font lebih kecil di mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Sidebar lebih kecil dan rapat */
+    .sidebar h1 {
+        font-size: 24px;
+    }
+
+    .sidebar h2 {
+        font-size: 16px;
+    }
+
+    .main-content h2 {
+        font-size: 24px;
+    }
+
+    /* Tabel lebih mudah dibaca pada layar kecil */
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    /* Ukuran gambar lebih kecil di layar kecil */
+    td img {
+        width: 60px;
+    }
+
+    /* Tombol edit dan delete disesuaikan */
+    .edit-btn, .delete-btn {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
