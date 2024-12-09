@@ -1,0 +1,200 @@
+/* Styles for the login page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b83b3b;
+    padding: 20px;
+}
+
+.logo-login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.logo {
+    text-align: left;
+    font-family: 'Limelight', cursive;
+    margin-right: 20px;
+}
+
+.logo h1 {
+    font-size: 48px;
+    color: white;
+}
+
+.logo p {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: white;
+}
+
+.login-form {
+    background-color: #7f2929;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-form input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: #2e1e1e;
+    color: white;
+    text-align: center;
+}
+
+.login-form button {
+    background-color: #b79a7f;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-message {
+    margin-top: 15px;
+    color: white;
+}
+
+.login-message a {
+    color: white;
+    text-decoration: underline;
+}
+
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-login img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .logo-login-wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 36px;
+    }
+
+    .logo p {
+        font-size: 18px;
+    }
+
+    .login-form {
+        width: 100%;
+    }
+
+    .login-form input,
+    .login-form button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .login-form button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .logo p {
+        font-size: 16px;
+    }
+
+    .login-form input,
+    .login-form button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .login-form button {
+        font-size: 14px;
+    }
+}
+
+/* Pop-Up Styles */
+.popup {
+    display: none; /* Sembunyikan pop-up secara default */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Pastikan pop-up berada di atas elemen lain */
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.popup-content h2 {
+    margin-bottom: 15px;
+}
+
+.popup-content button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirm-btn {
+    background-color: #4CAF50; /* Warna hijau untuk konfirmasi */
+    color: white;
+}
+
+#cancel-btn {
+    background-color: #f44336; /* Warna merah untuk batal */
+    color: white;
+}
